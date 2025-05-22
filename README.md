@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pages:
+Car Listing Page - Implements server-side rendering for displaying the list of cars with filtering, sorting, and pagination features.
+Car Details Page - Implements server-side rendering to display detailed information about a selected car.
 
-## Getting Started
+Components:
+Homepage - Acts as the parent component for other components like CarList, Filter, Sort, and Pagination. It manages and passes data to these components.
+CarList - Displays a list of cars. Each car’s information is rendered using data passed from the Homepage.
+CarDetails - Displays detailed information about a specific car on the Car Details Page.
+Filter - Provides filtering options (e.g., brand, model, year) to narrow down the car list.
+Sort - Allows users to sort the car list based on various attributes like price, year, etc.
+Pagination - Handles pagination of the car list for better navigation across multiple pages.
+Search - Allows searching for cars based on keywords.
+Header - The top navigation bar that includes the brand name and a search input.
 
-First, run the development server:
+Utils:
+Constants - Stores all constant values used across the application (e.g., count per page, static options).
+routes - Contains BASE URL and end points of API.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Slice - Contains Redux slices for state management:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+CarListSlice: Stores and manages the data of all available cars.
+FilterSlice: Stores and manages the current filters, search terms, sort options, and pagination data.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ProcessCarData - Contains the logic for filtering, sorting, and searching the car data based on current state.

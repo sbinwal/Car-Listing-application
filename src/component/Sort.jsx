@@ -12,7 +12,7 @@ const Sort = ({ onSortChange }) => {
     const selectedOption = e.target.value;
     setSortOption(selectedOption);
     dispatch(applyFilter({ ...filterData, page: 1, sortByData: selectedOption }));
-    router.push(`/?page=1&&filter=${JSON.stringify({ ...filterData.filter })}&sort=${selectedOption}`);
+    router.push(`/?page=1&&filter=${JSON.stringify({ ...filterData.filter })}&sort=${selectedOption}&searc=${filterData?.search}`);
     // Call the parent component's handler if provided
     if (onSortChange) {
       onSortChange(selectedOption);

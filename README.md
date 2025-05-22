@@ -1,3 +1,6 @@
+How to run the project?
+To run the project locally run the command npm run dev
+
 Pages:
 Car Listing Page - Implements server-side rendering for displaying the list of cars with filtering, sorting, and pagination features.
 Car Details Page - Implements server-side rendering to display detailed information about a selected car.
